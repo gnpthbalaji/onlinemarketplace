@@ -22,7 +22,28 @@
 			}
 			return cookieValue;
 		}
-		const csrftoken = getToken('csrftoken');
+		let csrftoken = getToken('csrftoken');
+
+		function getCookies(name){
+			let cookieArr = document.cookie.split(';');
+			for (let i = 0; i < cookieArr.length; i++){
+				let cookiePair = cookieArr[i].split('=');
+				console.log(cookiePair);
+				if (name == cookiePair[0].trim()){
+					return decodeURIComponent(cookiePair[1]);
+				}
+			}
+			return null;
+		}
+
+		let cart = JSON.parse(getCookies('cart'));
+
+		if (cart == undefined){
+			cart = {};
+			console.log('Cart is Created!')
+			document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/";
+		}
+		console.log('Cart:',cart);
 	</script>
 
 </head>
