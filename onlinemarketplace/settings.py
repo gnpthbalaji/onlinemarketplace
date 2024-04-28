@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-nm(c%z6rzzbz02r=!q3qh=u9-y8bv&-^gzok4f*20=q!o8ij$y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['balaji-onlinemarketplace-ee9c062905f2.herokuapp.com','127.0.0.1']
 
 
 # Application definition
