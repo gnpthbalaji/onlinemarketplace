@@ -122,12 +122,6 @@ STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = 'static/'
 
-STORAGES = {
-    'staticfiles': {
-        "BACKEND":'django.core.files.storage.FileSystemStorage',
-    }
-}
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
